@@ -1,0 +1,12 @@
+def kidswithcandies(candies,extracandies):
+    max_candies = max(candies)
+    result = []
+
+    for candy in candies:
+        result.append(candy + extracandies >= max_candies)
+     return result
+
+candies = [ 2,3,5,1,3]
+extracandies = 3
+answer = kidswithcandies(candies,extracandies)
+print(answer)

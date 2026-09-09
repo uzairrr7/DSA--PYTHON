@@ -1,0 +1,16 @@
+def smallernumbersthancurrent(nums):
+    result = []
+
+    for  num in nums:
+         count = 0
+
+         for x in nums:
+             if x < num:
+                  count += 1
+
+          result.append(count)\
+
+      return result
+
+nums = [8,1,2,2,3]
+print(smallernumberthancurrent(nums))                

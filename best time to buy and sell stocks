@@ -14,5 +14,6 @@ class solution:
     solution = solution()
 
     prices = [7,1,5,3,6,4]
+
     result = solution.maxprofit(prices)
     

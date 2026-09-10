@@ -1,0 +1,9 @@
+def richestcustomer(wealth):
+     max_wealth = 0
+     for customer in wealth:
+         current_ wealth = sum(customer)
+         if current_wealth > max_wealth:
+ return max _health
+
+wealth = [[1,2,3] , [3,2,1]]
+print(richestcustomer(wealth))

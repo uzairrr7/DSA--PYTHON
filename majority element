@@ -1,0 +1,16 @@
+class solution:
+    def majorityelement(self , nums):
+        count = 0 
+        for num in nums:
+            if count == 0:,
+               candidate = num
+            if num == candidate:
+               count += 1
+            else:
+                count -= 1
+        return candidate
+
+  solution = solution()
+  nums = [ 2,2,9,1,10,2,2,2]
+  result = solution.majorityelement(nums)
+  print("majority element:" , result)

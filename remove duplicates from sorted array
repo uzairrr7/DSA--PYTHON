@@ -1,0 +1,16 @@
+class solution:
+   def remove(self, nums):
+       if len(nums) == 0:
+          return 0 
+      i = 0 
+      for j in range(1,len(nums)):
+          if nums[j] != nums[i]:
+             i +=
+             nums[i] = nums[j]
+          return i + 1
+solution = solution()
+nums = [ 1,1,2,2,3,3]
+result = solution.removeduplicates(nums)
+print("number of unique elements:", result)
+print("array:",nums)
+print("unique elements:", nums[:result])

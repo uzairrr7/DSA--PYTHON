@@ -1,0 +1,14 @@
+class solution:
+    def containsduplicate(self , nums):
+        seen = set()
+
+        for num in nums :
+           if num in seen:
+              return true
+           return false
+solution = solution()
+nums = [1 ,2 ,3 ,4 ,5 ,1 ]
+result = solution.containsduplicate(nums)
+print("nums" , nums)
+print("contains duplicate" , result)
+  

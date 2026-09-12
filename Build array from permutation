@@ -6,3 +6,4 @@ class Solution:
             ans.append(nums[nums[i]])
 
         return ans
+

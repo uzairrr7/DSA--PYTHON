@@ -14,3 +14,5 @@ result = solution.removeduplicates(nums)
 print("number of unique elements:", result)
 print("array:",nums)
 print("unique elements:", nums[:result])
+
+

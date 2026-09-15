@@ -1,0 +1,27 @@
+class solution:
+   def subarray(self,nums,k):
+       prefix_count = {0:1}
+
+       current_sum = 0
+       count = 0
+
+       for num in nums:
+           current_sum += num
+           needed = current_sum - k
+           if needed in prefix_count :
+               count += prefix_count[needed]
+
+          if current_sum in prefix count:
+              prefix_count[current_sum] += 1
+          else:
+             prefix_count[current_sum] = 1
+        return count
+
+solution = solution()
+nums = [1,1,1]
+k = 2
+result = solution.subarraysum(nums,k)
+print("array:" , nums)
+print("k:" , k)
+print("number of subarrays:" , result)
+ 

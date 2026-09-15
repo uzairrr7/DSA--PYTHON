@@ -1,0 +1,33 @@
+class solution:
+   def searchmatrix(self,matrix,target):
+       rows = len(matrix)
+       columns  = len(matrix[0])
+
+       left =  0 
+       right = rows * columns - 1
+
+       while left <= right:
+           mid = (left + right) // 2
+
+           row = mid // columns
+           column = mid % columns
+
+           if matrix[row][column] == target:
+                return True
+           elif matrix[row] [column] == target:
+                 left = mid - 1
+      return False
+
+solution = solution()
+matrix = [
+[1,3,5,7],
+[10,11,16,20],
+[23,30,34,60]
+
+]
+
+target = 16
+result = solution.searchmatrix(matrix,target)
+print("matrix:" , matrix)
+print("target:" , target)
+print("found:" , result)

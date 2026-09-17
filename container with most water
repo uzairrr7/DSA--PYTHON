@@ -1,0 +1,21 @@
+class solution:
+   def maxarea(self,right):
+       left = 0
+       right = len(height) - 1
+       maximum_area = 0
+       while left < right:
+          width = right - left
+          current_height = min(height[left] , hright[right])
+          area = width * current_height
+          maximum_area = max(maximum_area , area)
+          if height[left] < height[right]:
+             left += 1
+          else:
+            right -= 1
+        return maximum_area
+
+solution = solution()
+height = [ 1,8,6,2,5,4,8,3,7]
+result = solution.maxarea(height)
+print("heights:" , height)
+print("maximum area:" , result)

@@ -24,3 +24,5 @@ result = solution.search(nums,target)
 print("array", nums)
 print("target", target)
 print("index", result) 
+
+

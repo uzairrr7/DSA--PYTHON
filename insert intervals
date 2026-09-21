@@ -1,0 +1,22 @@
+class solution:
+   def insert(self,intervals,newintervals):
+       result = []
+
+       for interval in intervals:
+           if interval[1] < newinterval[0]:
+              result.append(interval)
+           elif interval[0] > newinterval[1]:
+                result.append(newinterval)
+                newinterval = interval
+           else:
+                newinterval[0] = min(newinterval[0] , interval [0])
+                newinterval[1] = max(newinterval[1] , interval[1])
+        result.append(newinterval)
+        return result
+solution = solution()
+intervals = [[1,3] , [6,9]]
+newinterval = [2,5]
+result = solution.insert(intervals,newinterval)
+print("intervals:" , intervals)
+print("new interval:", newinterval)
+print("result:" result)

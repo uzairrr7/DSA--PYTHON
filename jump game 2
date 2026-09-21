@@ -1,0 +1,15 @@
+class solution:
+   def jump(self,nums):
+       current_end = 0
+       farthest = 0
+       for i in range (len(nums)-1):
+           farthest = max(farthest,i+nums[i])
+           if i == current_end:
+               jumps += 1
+               current_end = farthest
+        return jumps
+solution = solution()
+nums = [2,3,1,1,4]
+result = solution.jump(nums)
+print("array:" , nums)
+print("minimum jumps:", result)

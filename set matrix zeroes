@@ -1,0 +1,38 @@
+class Solution:
+    def setZeroes(self, matrix):
+        zero_rows = set()
+        zero_columns = set()
+
+        rows = len(matrix)
+        columns = len(matrix[0])
+
+        # Find all zeros
+        for i in range(rows):
+            for j in range(columns):
+                if matrix[i][j] == 0:
+                    zero_rows.add(i)
+                    zero_columns.add(j)
+
+        # Set rows to zero
+        for i in zero_rows:
+            for j in range(columns):
+                matrix[i][j] = 0
+
+        # Set columns to zero
+        for j in zero_columns:
+            for i in range(rows):
+                matrix[i][j] = 0
+solution = Solution()
+
+matrix = [
+    [1, 2, 3],
+    [4, 0, 6],
+    [7, 8, 9]
+]
+
+solution.setZeroes(matrix)
+
+print("Result:")
+
+for row in matrix:
+    print(row)

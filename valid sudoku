@@ -23,6 +23,8 @@ class solution:
                 boxes[box_index].add(num)
 
         return True
+
+
 solution = solution()
 
 board = [

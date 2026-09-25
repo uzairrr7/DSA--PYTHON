@@ -26,3 +26,5 @@ result = solution.maxProduct(nums)
 
 print("Array:", nums)
 print("Maximum Product:", result)
+
+### THIS IS CREATED ON 24/09/26

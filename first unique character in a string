@@ -15,3 +15,4 @@ solution = solution()
 s = "leetcode"
 result = solution.uniqchar(s)
 print("first unique character:", result)
+

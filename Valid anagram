@@ -1,0 +1,26 @@
+class solution():
+    def isanagram(self , s, t):
+        if len(s) != len(t):
+            return False
+        count_s ={}
+        count_t ={}
+
+        for char in s:
+            if char in count_s:
+                count_s[char] += 1
+            else:
+                count_s[char] = 1
+        for char in t:
+            if char in count_t:
+                count_t[char] = 1
+            else:
+                count_t[char] = 1 
+        return count_s == count_t
+                
+solution = solution()
+s = "rat"
+t = "tar"
+result = solution.isanagram(s,t)
+print("string 1:", s)
+print("string 2:", t)
+print(" IS ANAGRAM:", result)

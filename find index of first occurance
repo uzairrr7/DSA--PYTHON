@@ -1,0 +1,11 @@
+class solution:
+    def str(self,haystack,needle):
+        for i in range(len(haystack) - len(needle) + 1):
+            if haystack[i:i + len(needle)] == needle:
+                return i
+solution = solution()
+haystack = "sadbutsad"
+needle = "sad"
+result = solution.str(haystack, needle)
+print("input:", repr(haystack), repr(needle))
+print("index of first occurrence:", result)          

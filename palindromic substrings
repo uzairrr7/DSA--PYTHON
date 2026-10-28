@@ -1,0 +1,27 @@
+
+class Solution:
+    def countSubstrings(self, s):
+        count = 0
+
+        def expand(left, right):
+            total = 0
+            while left >= 0 and right < len(s) and s[left] == s[right]:
+                total += 1
+                left -= 1
+                right += 1
+            return total
+
+        for i in range(len(s)):
+            count += expand(i, i)       # Odd-length palindromes
+            count += expand(i, i + 1)   # Even-length palindromes
+
+        return count
+
+
+solution = Solution()
+
+s = "aaa"
+result = solution.countSubstrings(s)
+
+print("Input:", s)
+print("Number of palindromic substrings:", result)

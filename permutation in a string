@@ -1,0 +1,38 @@
+
+class Solution:
+    def checkInclusion(self, s1, s2):
+        if len(s1) > len(s2):
+            return False
+
+        target = [0] * 26
+        window = [0] * 26
+
+        for char in s1:
+            target[ord(char) - ord('a')] += 1
+
+        for i in range(len(s1)):
+            window[ord(s2[i]) - ord('a')] += 1
+
+        if window == target:
+            return True
+
+        for right in range(len(s1), len(s2)):
+            window[ord(s2[right]) - ord('a')] += 1
+            window[ord(s2[right - len(s1])] -= 1
+
+            if window == target:
+                return True
+
+        return False
+
+
+solution = Solution()
+
+s1 = "ab"
+s2 = "eidbaooo"
+
+result = solution.checkInclusion(s1, s2)
+
+print("String 1:", s1)
+print("String 2:", s2)
+print("Permutation exists:", result)

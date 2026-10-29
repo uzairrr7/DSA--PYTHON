@@ -1,0 +1,23 @@
+class solution:
+    def decodestring(self,s):
+        stack = []
+        current_num = ""
+        number = 0
+        for char in s:
+            if char.isdigit():
+                number = number * 10 + int(char)
+            elif char == "[":
+                stack.append((current_num, number))
+                current_num = ""
+                number = 0
+            elif char == "]":
+                prev_num, repeat_count = stack.pop()
+                current_num = prev_num + current_num * repeat_count
+            else:
+                current_num += char
+        return current_num
+solution = solution()
+s = "3[a2[c]]"
+result = solution.decodestring(s)
+print("encoded string:", s)
+print("decoded string:", result)

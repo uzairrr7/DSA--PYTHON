@@ -1,0 +1,23 @@
+class solution:
+    def convert(self,s,numrows):
+        if numrows == 1 or numrows >= len(s):
+            return s
+        rows = [''] * numrows
+        current_row = 0
+        direction = -1
+        for char in s:
+            rows[current_row] += char
+            if current_row == 0 :
+
+                direction = 1
+            elif current_row == numrows - 1:
+                direction = -1
+            current_row += direction
+        return "".join(rows)
+solution = solution()
+s = "PAYPALISHIRING"
+numrows = 3
+result = solution.convert(s,numrows)
+print("input:",s)
+print("number of rows:",numrows)
+print("zigzag conversion:",result)

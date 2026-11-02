@@ -1,0 +1,17 @@
+class solution:
+    def simplifypath(self,path):
+        stack =[]
+        for part in path.split("/"):
+            if part == "" or part == ".":
+                continue
+            elif part == "..":
+                if stack:
+                    stack.pop()
+            else:
+                stack.append(part)
+        return "/" + "/".join(stack)
+solution = solution()
+path = "/a/./b/../../c/"
+result = solution.simplifypath(path)
+print("input:", path)
+print("simplified path:", result)

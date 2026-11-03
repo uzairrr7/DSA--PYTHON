@@ -1,0 +1,20 @@
+class solution:
+    def closestrings(self,word1,word2):
+        if len(word1) != len(word2):
+            return False
+        freq1 = {}
+        freq2 = {}
+        for char in word1:
+            freq1[char] = freq1.get(char,0) + 1
+        for char in word2:
+            freq2[char] = freq2.get(char,0) + 1
+        return(
+            freq1.keys() == freq2.keys()
+            and sorted(freq1.values()) == sorted(freq2.values())
+ )
+solution = solution()
+word1 = "abc"
+word2 = "bca"
+result = solution.closestrings(word1,word2)
+print("Input:", word1, word2)
+print("Are close strings:", result)

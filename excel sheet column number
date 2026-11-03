@@ -1,15 +1,19 @@
-class solution:
-    def removeduplicates(self,s):
-        stack = []
-        for char in s:
-            if stack and stack[-1] == char:
-                stack.pop()
-            else:
-                stack.append(char)
-        return "".join(stack)
 
-solution = solution()
-s = "abbaca"
-result = solution.removeduplicates(s)
-print("Input:", s)
-print("Output after removing adjacent duplicates:", result)
+class Solution:
+    def titleToNumber(self, columnTitle):
+        result = 0
+
+        for char in columnTitle:
+            value = ord(char) - ord('A') + 1
+            result = result * 26 + value
+
+        return result
+
+
+solution = Solution()
+
+columnTitle = "AB"
+answer = solution.titleToNumber(columnTitle)
+
+print("Excel column:", columnTitle)
+print("Column number:", answer)

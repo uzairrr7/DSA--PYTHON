@@ -1,0 +1,20 @@
+class solution:
+    def findandreplacepattern(self,words,pattern):
+        def matches(word):
+            mapping = {}
+            reverse = {}
+            for a,b in zip(pattern,word):
+                if a in mapping and mapping[a] !=b:
+                    return False
+                if b in reverse and reverse[b] != a:
+                    return False
+                mapping[a] = b
+                reverse[b] = a
+            return True
+        return[word for word in words if matches(word)]
+solution = solution()
+words = ["abc","deq","mee","aqq","dkd","ccc"]
+pattern = "abb"
+result = solution.findandreplacepattern(words,pattern)
+print("Input:", words, pattern)
+print("Matching words:", result)
